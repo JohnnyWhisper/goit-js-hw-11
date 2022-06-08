@@ -1,4 +1,3 @@
-import Notiflix from 'notiflix';
 const axios = require('axios').default;
 
 export default async function  makeSearch({baseUrl,search,apiKey,page,perPage} ) {
