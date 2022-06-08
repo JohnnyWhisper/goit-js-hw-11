@@ -4,6 +4,6 @@ export const config = {
     page: 1,
     perPage: 20,
     search: '',
-    totalHits: 0,
+    totalHits: '',
 };
 

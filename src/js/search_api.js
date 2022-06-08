@@ -6,6 +6,8 @@ export default async function  makeSearch({baseUrl,search,apiKey,page,perPage} )
     const response = await axios.get(url);
     const data = await response.data;
     return data;
+
+    
     // return axios.get(url)
     //     .then(response => {
     //         if (response.status !== 200) {
@@ -15,4 +17,7 @@ export default async function  makeSearch({baseUrl,search,apiKey,page,perPage} )
     //      return response.data;
     //     }); 
 };
-// alert(Notiflix.Notify.success(`"Hooray! We found ${totalHits} images."`));
+
+if (totalHits > 0) {
+    Notiflix.Notify.success(`Hooray! We found ${totalHitsValue} images.`)
+}
