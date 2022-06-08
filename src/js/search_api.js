@@ -15,4 +15,4 @@ export default async function  makeSearch({baseUrl,search,apiKey,page,perPage} )
     //      return response.data;
     //     }); 
 };
-alert(Notiflix.Notify.success(`"Hooray! We found ${totalHits} images."`));
+// alert(Notiflix.Notify.success(`"Hooray! We found ${totalHits} images."`));
