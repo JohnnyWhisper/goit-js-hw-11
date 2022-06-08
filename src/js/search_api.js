@@ -6,7 +6,7 @@ export default async function  makeSearch({baseUrl,search,apiKey,page,perPage} )
     const data = await response.data;
     return data;
 
-    
+
     // return axios.get(url)
     //     .then(response => {
     //         if (response.status !== 200) {

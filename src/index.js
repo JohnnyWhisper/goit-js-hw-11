@@ -26,6 +26,10 @@ function onSearchFormSubmit(event) {
             config.search = '';
             return Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
         };      
+
+        if (data.totalHits > 0) {
+           return Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
+        }
         config.page += 1;
         refs.loadMoreBtn.classList.remove('disabled');
         config.totalHits += config.perPage;
