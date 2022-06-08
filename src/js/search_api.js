@@ -1,4 +1,4 @@
-
+import Notiflix from 'notiflix';
 const axios = require('axios').default;
 
 export default async function  makeSearch({baseUrl,search,apiKey,page,perPage} ) {
@@ -15,3 +15,4 @@ export default async function  makeSearch({baseUrl,search,apiKey,page,perPage} )
     //      return response.data;
     //     }); 
 };
+Notiflix.Notify.success(`"Hooray! We found ${totalHits} images."`);
