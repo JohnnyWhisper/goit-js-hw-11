@@ -25,7 +25,7 @@ function onSearchFormSubmit(event) {
         if (data.totalHits === 0) {
             config.search = '';
             return Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
-        };      
+        } ;      
         Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
         config.page += 1;
         refs.loadMoreBtn.classList.remove('disabled');
