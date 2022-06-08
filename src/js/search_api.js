@@ -18,6 +18,3 @@ export default async function  makeSearch({baseUrl,search,apiKey,page,perPage} )
     //     }); 
 };
 
-if (totalHits > 0) {
-    Notiflix.Notify.success(`Hooray! We found ${totalHitsValue} images.`)
-}
