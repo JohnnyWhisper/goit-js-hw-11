@@ -27,14 +27,24 @@ function onSearchFormSubmit(event) {
             return Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
         };      
 
-        if (data.totalHits > 0) {
+        if (data.totalHits < 20 ) {
            Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
+           config.totalHits += config.perPage;
+           event.target.reset();
+           makeMarckUp(data);    
+
         }
-        config.page += 1;
-        refs.loadMoreBtn.classList.remove('disabled');
-        config.totalHits += config.perPage;
-        event.target.reset();
-        makeMarckUp(data);             
+
+        if (data.totalHits >= 20 ) {
+            Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
+            config.page += 1;
+            refs.loadMoreBtn.classList.remove('disabled');
+             config.totalHits += config.perPage;
+            event.target.reset();
+            makeMarckUp(data);   
+        }
+        
+                  
     })
         .catch(error => errorHandling());    
 };
